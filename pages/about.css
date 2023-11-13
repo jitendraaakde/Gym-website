@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-color: #ffffff;
+  /* all background color */
+  --boxes-color-: #57421e;
+  /* boxes colorr */
+  --boxes-color-hover: #3a2a0d;
+  /* boxes color Hover */
+  --button-color-: #8a5300;
+  /* Button color */
+  --button-color-hover: #4c2e01;
+  /* Button Hover color */
+  --small-text: #5e2d2d;
+  /* All small text and box text color */
+  --white: #ffffff;
+  /* All big text, heading of sections, button inner text */
+  --heading-color: rgb(68, 11, 11);
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  /* margin-bottom: 1rem; */
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: black;
+}
+
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: var(yellow);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--button-color-);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--button-color-hover);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg__blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 50px var(--button-color-);
+  z-index: -1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__logo a p {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--small-text);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+} 
+
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.link a {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: var(--heading-color);
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--button-color-);
+  transition: 0.3s;
+}
+
+.link a:hover::after {
+  width: 50%;
+}
+.hero{
+  background-color: var(--bg-color);
+  overflow: hidden;
+
+}
+.heading h1{
+  color: black;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 35px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 65px auto;
+}
+.hero-content{
+  flex: 1;
+  width: 600px;
+  margin: 0px 25px;
+  animation: fadeInUp 2s ease;
+}
+.hero-content h2{
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: var(--button-color-);
+}
+
+.hero-content button{
+  display: inline-block;
+  background-color: var(--button-color-);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3 ease;
+}
+.hero-content button a{
+  text-decoration: none;
+  color: white;
+  /* background-color: #ffffff; */
+}
+
+.hero-content button:hover{
+  background-color: var(--button-color-hover);
+  transform: scale(1.1);
+}
+
+.hero-content p{
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: var(--small-text);
+}
+
+.hero-image{
+  flex:1;
+  width: 600px;
+  margin: auto;
+  animation: fadeInUp 2s ease;
+}
+img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media screen and (max-width:768px){
+  .heading h1{
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .hero{
+    margin: 0px;
+  }
+  .container{
+    width: 100%;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 40px;
+  }
+  .hero-content{
+    width: 100%;
+    margin: 35px 0px;
+  }
+  .hero-content h2{
+      font-size: 30px;
+  }
+  .hero-content p{
+      font-size: 18px;
+      margin-bottom: 20px;
+  }
+  .hero-content button{
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  .hero-image{
+    width: 100%;
+  }
+} 
+
+@keyframes fadeInUp {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
